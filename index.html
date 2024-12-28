@@ -4,46 +4,350 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/relative.css">
         <title>Document</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="assets/js/app.js"></script>
     </head>
     <body>
-        <div class="center"></div>
         <header>
+            <div class="title"></div>
             <div class="logo-panel">
-                <div class="logo"></div> 
+                <a href="index.html">
+                    <img src="assets/img/logo.png" class="logo">
+                </a>
+                <a href="index.html">
+                    <div class="slogan">
+                        <span>NASA</span>
+                    </div>
+                </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Преглед на Юпитер</a></li>
-                    <li><a href="#">Факти</a></li>
-                    <li><a href="#">Числа</a></li>
-                    <li><a href="#">Проучване</a></li>
-                    <li><a href="#">Луни на Юпитер</a></li>
-                    <li><a href="#">Истории</a></li>
-                    <li><a href="#">Ресурси</a></li>
+                    <!-- Иформация по темата -->
+                    <li><a href="index.html">Преглед на Юпитер</a></li>
+                    <li><a href="facts.html">Факти</a></li>
+                    <li><a href="numbers.html">Числа</a></li>
+                    <li><a href="exploration.html">Проучване</a></li>
+                    <li><a href="moons.html">Луни на Юпитер</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
                 </ul>
             </nav>
         </header>
+
         <main>
-            <div class="container">
-                <div class="banner">
+            <div class="banner">
+                <div class="container">
                     <div class="heading">
-                        <h1>
+                        <h1 style="margin: 0;">
                             Юпитер 
                         </h1>
                         <p>
-                        Юпитер е петата планета от Слънцето и най-голямата в Слънчевата система – повече от два пъти по-масивна от останалите планети взети заедно.
+                            Юпитер е петата планета от Слънцето и най-голямата в Слънчевата система – 
+                            <br>повече от два пъти по-масивна от останалите планети взети заедно.
                         </p>
                     </div>
                 </div>
-                <div class="stats">
-                    <!-- 4 columns-->
-                </div>
             </div>
+
+            <section class="stats">
+                <div class="now">Юпитер сега</div>
+                <div class="main-stats">
+                    <article>
+                        <div class="line"></div>
+                        <b>Разстояние до Слънцето</b>
+                        <span>484 million miles</span>
+                    </article>
+                    <article>
+                        <div class="line"></div>
+                        <b>Светлината да Достигне от Слънцето</b>
+                        <span>43 minutes</span>
+                    </article>
+                    <article>
+                        <div class="line"></div>
+                        <b>Продължителност на Годината</b>
+                        <span>4,333 Земни дни</span>
+                    </article>
+                    <article>
+                        <div class="line"></div>
+                        <b>Тип на планета</b>
+                        <span>Газов гигант</span>
+                    </article>
+                </div>
+            </section>
+
+            <section class="facts">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="tabs">
+                                <li class="active" tab="first">
+                                    <span>Факти</span>
+                                    <div class="bold_divider"></div>
+                                </li>
+                                <li class="" tab="second">
+                                    <span>Числа</span>
+                                    <div class="bold_divider"></div>
+                                </li>
+                                <li class="" tab="third">
+                                    <span>Изследване</span>
+                                    <div class="bold_divider"></div>
+                                </li>
+                                <li class="" tab="forth">
+                                    <span>Луни</span>
+                                    <div class="bold_divider"></div>
+                                </li>
+                            </ul>
+                            <div class="divider"></div>
+                            <ul class="tabs-content">
+                                <li id="first" class="show info">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h1>Факти за юпитер</h1>
+                                            <b>Юпитер е най-голямата и най-старата планета в нашата Слънчева система.</b>
+                                            <p>
+                                                Ако Юпитер беше куха черупка, 1000 Земи биха могли да 
+                                                се поберат вътре. Юпитер има най-краткия ден в 
+                                                Слънчевата система, отнема само 10,5 часа, за да се 
+                                                завърти веднъж около оста си.
+                                            </p>
+                                            <h3>
+                                                <a href="facts.html">
+                                                    Научи повече за Юпитер
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="img-preview">
+                                                <img src="assets/img/jupiter1.png" alt="Jupiter">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="second" class="info">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h1>Числа</h1>
+                                            <b>Колко голям е Юпитер? Колко далеч е от Слънцето?</b>
+                                            <p>
+                                                Използвайте този инструмент, за да сравните Юпитер със Земята и други планети.
+                                            </p>
+                                            <h3>
+                                                <a href="numbers.html">
+                                                    Анализирай и Сравни
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="img-preview">
+                                                <img src="assets/img/jupiter2.png" alt="Jupiter">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="third" class="info">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h1>Изследване на Юпитер</h1>
+                                            <b>Първите подробни наблюдения на Юпитер са направени от Галилео Галилей през 1610 г. с малък, самоделен телескоп.</b>
+                                            <p>
+                                                Съвсем наскоро тази планета е изследвана от 
+                                                орбитални апарати, сонди и космически кораби, 
+                                                преминаващи покрай нея на път към други светове. 
+                                                Космическият кораб Juno на НАСА в момента изучава 
+                                                гигантската планета от орбита. Europa Clipper 
+                                                стартира на 14 октомври 2024 г., за да изследва 
+                                                ледената луна на Юпитер, Европа.
+                                            </p>
+                                            <h3>
+                                                <a href="exploration.html">
+                                                    Повече за мисиите на Юпитер
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="img-preview">
+                                                <img src="assets/img/jupiter3.png" alt="Jupiter">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li id="forth" class="info">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h1>Луни на Юпитер</h1>
+                                            <b>Юпитер има 95 луни, които са официално признати от Международния астрономически съюз.</b>
+                                            <p>
+                                                Но числото не отразява сложността на системата от 
+                                                луни, пръстени и астероиди на Йовиан. Гигантската 
+                                                планета има хиляди малки обекти в орбитата си.                                            
+                                            </p>
+                                            <h3>
+                                                <a href="moons.html">
+                                                    Още за Луните на Юпитер
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="img-preview">
+                                                <img src="assets/img/jupiter4.png" alt="Jupiter">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="things">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>10 неща, които трябва да знаете за Юпитер</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <span class="number">01</span>
+                                        <h3>
+                                            Най-голямата планета
+                                        </h3>
+                                        <p>
+                                            Единадесет Земи могат да се поберат през екватора на 
+                                            Юпитер. Ако Земята беше с размерите на грозде, Юпитер 
+                                            щеше да е с размерите на баскетболна топка.
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <span class="number">02</span>
+                                        <h3>
+                                            Петата планета от нашата звезда                                        
+                                        </h3>
+                                        <p>
+                                            Юпитер обикаля на около 484 милиона мили (778 милиона 
+                                            километра) или 5,2 астрономически единици (AU) от 
+                                            нашето Слънце (Земята е на една AU от Слънцето).
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <span class="number">03</span>
+                                        <h3>
+                                            Къс ден/Дълга година
+                                        </h3>
+                                        <p>
+                                            Юпитер се върти веднъж на всеки 10 часа (ден на 
+                                            Йовиан), но са му необходими около 12 земни години, 
+                                            за да завърши една орбита около Слънцето (година на 
+                                            Юпитер).
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="img-cell jupiter_io">
+                                        <h3>
+                                            Юпитер и Йо
+                                        </h3>
+                                    </td>
+                                    <td>
+                                        <span class="number">04</span>
+                                        <h3>
+                                            Какво има вътре
+                                        </h3>
+                                        <p>
+                                            Юпитер е газов гигант и затова му липсва земна 
+                                            повърхност. Ако изобщо има твърдо вътрешно ядро, 
+                                            вероятно е с размерите на Земята.
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <span class="number">05</span>
+                                        <h3>
+                                            Масивен свят, леки елементи
+                                        </h3>
+                                        <p>
+                                            Атмосферата на Юпитер се състои предимно от водород 
+                                            (H2) и хелий (He).
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="number">06</span>
+                                        <h3>
+                                            Светове в изобилие
+                                        </h3>
+                                        <p>
+                                            Юпитер има повече от 75 луни.
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <span class="number">07</span>
+                                        <h3>
+                                            Опръстенен свят
+                                        </h3>
+                                        <p>
+                                            През 1979 г. мисията "Вояджър" откри слабата система от 
+                                            пръстени на Юпитер. И четирите гигантски планети в 
+                                            нашата слънчева система имат системи от пръстени.
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <span class="number">08</span>
+                                        <h3>
+                                            Изследване на Юпитер
+                                        </h3>
+                                        <p>
+                                            Девет космически кораба са посетили Юпитер. Седем 
+                                            прелетяха и двама обиколиха газовия гигант. Juno, 
+                                            най-новият, пристигна на Юпитер през 2016 г.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="number">09</span>
+                                        <h3>
+                                            Съставки за живот?
+                                        </h3>
+                                        <p>
+                                            Юпитер не може да поддържа живота такъв, какъвто го 
+                                            познаваме. Но някои от луните на Юпитер имат океани 
+                                            под кората си, които може да поддържат живот.
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <span class="number">10</span>
+                                        <h3>
+                                            Супер буря
+                                        </h3>
+                                        <p>
+                                            Голямото червено петно на Юпитер е гигантска буря, 
+                                            която е около два пъти по-голяма от Земята и бушува 
+                                            повече от век.
+                                        </p>
+                                    </td>
+                                    <td class="img-cell red_spot">
+                                        <h3>
+                                            Голямо червено петно
+                                        </h3>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer></footer>
-
-        <script src="assets/js/app.js"></script>
-
+        <footer>
+            <div class="container">
+                <img src="assets/img/logo.png" class="logo">
+                <p>All rights reserved</p>
+            </div>
+        </footer>
     </body>
 </html>
